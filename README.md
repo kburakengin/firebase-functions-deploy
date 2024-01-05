@@ -47,7 +47,7 @@ You can configure the action-functions-deploy GitHub Action using the following 
 |    `functionNames`     | `string` |    No    | The function names you have created in your project. Exp. myFunction1. exports.myFunction1 = "". If not provided deploys all the functions available.                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `firebaseToolsVersion` | `string` |    No    | The version of `firebase-tools` to use. If not specified, defaults to `latest`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-## Forked from FirebaseExtended/action-hosting-deploy
+## Forked from aronep6/action-functions-deploy
 
 This GitHub Action was forked from [aronep6/action-functions-deploy](https://github.com/aronep6/action-functions-deploy). I have added specific function name functionality which is being required a lot.
 
