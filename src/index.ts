@@ -26,7 +26,7 @@ const projectId = getInput("projectId");
 const googleApplicationCredentials = getInput("serviceAccountKey", {
   required: true,
 });
-const functions = getInput("functions");
+const functionNames = getInput("functionNames");
 const token = process.env.GITHUB_TOKEN || getInput("repoToken");
 const octokit = token ? getOctokit(token) : undefined;
 const entryPoint = getInput("entryPoint");
@@ -75,7 +75,7 @@ async function run() {
         projectId,
         firebaseToolsVersion,
       },
-      functions
+      functionNames
     );
     if (deployment.status === "error") {
       throw Error((deployment as ErrorResult).error);

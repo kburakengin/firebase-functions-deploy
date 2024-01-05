@@ -90,16 +90,18 @@ async function execWithCredentials(
 export async function deployCloudFunctions(
   gacFilename: string,
   productionDeployConfig: DeployConfig,
-  functions?: string
+  functionNames?: string
 ) {
   const { projectId, firebaseToolsVersion } = productionDeployConfig;
 
   let functionArgs: string = "functions";
 
-  if (functions) {
-    const functionNames = functions.split(",");
+  if (functionNames) {
+    const functionNamesList = functionNames.split(",");
     // add functions to each functionNames beginnig like "functions:" and , like functions:myFunction,functions:myFunction2
-    const functionArgsList = functionNames.map((name) => `functions:${name}`);
+    const functionArgsList = functionNamesList.map(
+      (name) => `functions:${name}`
+    );
     functionArgs = functionArgsList.join(",");
   }
 

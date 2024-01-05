@@ -33,7 +33,7 @@ inputs:
       "The project to deploy to. If you leave this blank, make sure you check in
       a .firebaserc file"
     required: false
-  functions:
+  functionNames:
     description:
       "The functions to deploy. If you leave this blank, all functions will be
       deployed"
