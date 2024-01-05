@@ -34,9 +34,7 @@ inputs:
       a .firebaserc file"
     required: false
   functionNames:
-    description:
-      "The functions to deploy. If you leave this blank, all functions will be
-      deployed"
+    description: "The functions to deploy. If you leave this blank, all functions will be deployed"
     required: false
   entryPoint:
     description:
