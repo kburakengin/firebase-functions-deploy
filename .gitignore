@@ -4,4 +4,3 @@ node_modules
 demo/.firebase/hosting.*.cache
 .env
 **test.ts
-bin
