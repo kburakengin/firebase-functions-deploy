@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: "Deploy to Cloud Function with Service Account key"
-description: "A GitHub Action to deploy to Firebase Functions with Service Account key"
-author: "Ousmane Mbaye (https://github.com/aronep6) and Firebase"
+name: "Deploy To Firebase Functions"
+description: "A GitHub Action to deploy to Firebase Functions with specific function names"
+author: "Kadir Burak Engin (https://github.com/kburakengin) and Firebase"
 branding:
   icon: "globe"
   color: "blue"
@@ -32,6 +32,11 @@ inputs:
     description:
       "The project to deploy to. If you leave this blank, make sure you check in
       a .firebaserc file"
+    required: false
+  functions:
+    description:
+      "The functions to deploy. If you leave this blank, all functions will be
+      deployed"
     required: false
   entryPoint:
     description:
