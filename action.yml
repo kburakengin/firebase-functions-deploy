@@ -1,0 +1,46 @@
+# Copyright 2020 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: "Deploy to Cloud Function with Service Account key"
+description: "A GitHub Action to deploy to Firebase Functions with Service Account key"
+author: "Ousmane Mbaye (https://github.com/aronep6) and Firebase"
+branding:
+  icon: "globe"
+  color: "blue"
+runs:
+  using: "node16"
+  main: "bin/action.min.js"
+inputs:
+  repoToken:
+    description: "The GITHUB_TOKEN secret"
+    required: false
+  serviceAccountKey:
+    description: "The Service Account key to use for authentication in JSON format, provided by Firebase or Google Cloud Platform"
+    required: true
+  projectId:
+    description:
+      "The project to deploy to. If you leave this blank, make sure you check in
+      a .firebaserc file"
+    required: false
+  entryPoint:
+    description:
+      "The location of your firebase.json file, relative to the root of your
+      directory"
+    default: "."
+    required: false
+  firebaseToolsVersion:
+    description: >-
+      The version of firebase-tools to use. Defaults to `latest`.
+    default: latest
+    required: false

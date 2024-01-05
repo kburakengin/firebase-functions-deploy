@@ -1,0 +1,7 @@
+node_modules
+.firebase/*
+**/*.d.ts
+demo/.firebase/hosting.*.cache
+.env
+**test.ts
+bin
