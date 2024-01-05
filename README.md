@@ -33,7 +33,7 @@ jobs:
         with:
           serviceAccountKey: "${{ secrets.DEPLOY_SERVICE_ACCOUNT_KEY }}"
           projectId: "${{ env.PROJECT_ID }}"
-          functions: "myFunction1,myFunction2" # The name of the functions
+          functionNames: "myFunction1,myFunction2" # The name of the functions
 ```
 
 ## Options
