@@ -29,7 +29,7 @@ jobs:
       - uses: actions/checkout@v2
       # Add any build steps here. For example:
       # - run: npm ci && npm run build
-      - uses: kburakengin/firebase-functions-deploy@actionv2
+      - uses: kburakengin/firebase-functions-deploy@v2
         with:
           serviceAccountKey: "${{ secrets.DEPLOY_SERVICE_ACCOUNT_KEY }}"
           projectId: "${{ env.PROJECT_ID }}"
