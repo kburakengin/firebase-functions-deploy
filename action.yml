@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: "Deploy To Firebase Functions"
+name: "Deploy To Firebase Functions With Specific Function Names"
 description: "A GitHub Action to deploy to Firebase Functions with specific function names"
 author: "Kadir Burak Engin (https://github.com/kburakengin) and Firebase"
 branding:
